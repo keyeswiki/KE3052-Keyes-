@@ -80,9 +80,12 @@ class lcd{
     void DisplayPicture();                //display picture.
     void WriteFont(int num);              //Writes the data from the font.c file to RAM.
     void Display(char *str);              //4 lines of 18 characters each.
+    void DisplayNum(int num);             //4 lines of 18 number each.
+    void Display_Num(int num);            //4 lines of 18 number each, display real-time numbers.
   private:
     int addr = 0x3f;  //Address of LCD device.
     int cursor[2]={0,0};
+    char numCursorPosition[18][4] = {};
 };
 
 #endif

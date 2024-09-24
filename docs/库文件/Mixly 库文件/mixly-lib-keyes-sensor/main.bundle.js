@@ -144,6 +144,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   lcd128_cursor: () => (/* binding */ lcd128_cursor),
 /* harmony export */   lcd128_d_pixel: () => (/* binding */ lcd128_d_pixel),
 /* harmony export */   lcd128_init: () => (/* binding */ lcd128_init),
+/* harmony export */   lcd128_number: () => (/* binding */ lcd128_number),
 /* harmony export */   lcd128_pixel: () => (/* binding */ lcd128_pixel),
 /* harmony export */   lcd128_string: () => (/* binding */ lcd128_string),
 /* harmony export */   make_arduino_paj7620_ReadReg: () => (/* binding */ make_arduino_paj7620_ReadReg),
@@ -2891,7 +2892,21 @@ const lcd128_string = {
     }
 };
 
-
+//128X32 LCD display 显示数字
+const lcd128_number = {
+    init: function () {
+        this.setColour(DISPLAY_HUE);
+        this.appendDummyInput("")
+            .appendField(blockly_core__WEBPACK_IMPORTED_MODULE_0__.Msg.MIXLY_DISPLAY_NUMBER)
+            .appendField(new blockly_core__WEBPACK_IMPORTED_MODULE_0__.FieldImage(__webpack_require__(/*! ../media/12832.png */ "./src/media/12832.png"), 84, 32));
+        this.appendValueInput("number", Number)
+            .setCheck(Number)
+            .setAlign(blockly_core__WEBPACK_IMPORTED_MODULE_0__.ALIGN_RIGHT);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setInputsInline(true);
+    }
+};
 //128X32 LCD display 画点坐标
 const lcd128_pixel = {
     init: function () {
@@ -3735,6 +3750,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   lcd128_cursor: () => (/* binding */ lcd128_cursor),
 /* harmony export */   lcd128_d_pixel: () => (/* binding */ lcd128_d_pixel),
 /* harmony export */   lcd128_init: () => (/* binding */ lcd128_init),
+/* harmony export */   lcd128_number: () => (/* binding */ lcd128_number),
 /* harmony export */   lcd128_pixel: () => (/* binding */ lcd128_pixel),
 /* harmony export */   lcd128_string: () => (/* binding */ lcd128_string),
 /* harmony export */   make_arduino_paj7620_ReadReg: () => (/* binding */ make_arduino_paj7620_ReadReg),
@@ -5211,6 +5227,13 @@ const lcd128_string = function (_, generator) {
     var code = 'Lcd.Display(' + lcd128str + ');\n';
     return code;
 };
+const lcd128_number = function (_, generator) {
+    //var lcd128str = generator.valueToCode(this, 'TEXT1', generator.ORDER_ATOMIC) || 'String("")'
+    //const lcd128str = generator.valueToCode(block, 'string', generator.ORDER_ATOMIC);
+    const lcd128str = generator.valueToCode(this, 'number', generator.ORDER_ATOMIC);
+    var code = 'Lcd.Display_Num(' + lcd128str + ');\n';
+    return code;
+};
 
 const lcd128_pixel = function (_, generator) {
     const row = generator.valueToCode(this, 'row', generator.ORDER_ATOMIC);
@@ -5912,6 +5935,7 @@ EnMsg.MIXLY_ke_MATRIX='8*8 dot matrix';
 EnMsg.MIXLY_LCD128_SETUP='128X32 LCD start';  ////////////////
 EnMsg.MIXLY_LCD128_CURSOR='128X32 LCD set cursor';
 EnMsg.MIXLY_DISPLAY_STRING='128X32 LCD display String';
+EnMsg.MIXLY_DISPLAY_NUMBER='128X32 LCD display Number';
 EnMsg.MIXLY_ke_LCD128_PIXLE='128X32 LCD draw pixel';
 EnMsg.MIXLY_ke_LCD128_D='128X32 LCD delete pixel';
 EnMsg.MIXLY_LCD128_CLEAR='128X32 LCD Clear';
@@ -6213,6 +6237,7 @@ ZhHansMsg.MIXLY_LCD_BACKLIGHT='打开背光'; ///
 ZhHansMsg.MIXLY_LCD128_SETUP='128X32 LCD 初始化';  ////////////////
 ZhHansMsg.MIXLY_LCD128_CURSOR='128X32 LCD 设置位置';
 ZhHansMsg.MIXLY_DISPLAY_STRING='128X32 LCD 显示字符';
+ZhHansMsg.MIXLY_DISPLAY_NUMBER='128X32 LCD 显示数字';
 ZhHansMsg.MIXLY_ke_LCD128_PIXLE='128X32 LCD 画点坐标';
 ZhHansMsg.MIXLY_ke_LCD128_D='128X32 LCD 删除点坐标';
 ZhHansMsg.MIXLY_LCD128_CLEAR='128X32 LCD 清屏';
@@ -6516,6 +6541,7 @@ ZhHantMsg.MIXLY_ke_MATRIX='8*8點陣';
 ZhHantMsg.MIXLY_LCD128_SETUP='128X32 LCD 初始化';  ////////////////
 ZhHantMsg.MIXLY_LCD128_CURSOR='128X32 LCD 设置位置';
 ZhHantMsg.MIXLY_DISPLAY_STRING='128X32 LCD 显示字符';
+ZhHantMsg.MIXLY_DISPLAY_NUMBER='128X32 LCD 显示数字';
 ZhHantMsg.MIXLY_ke_LCD128_PIXLE='128X32 LCD 画点坐标';
 ZhHantMsg.MIXLY_ke_LCD128_D='128X32 LCD 删除点坐标';
 ZhHantMsg.MIXLY_LCD128_CLEAR='128X32 LCD 清屏';

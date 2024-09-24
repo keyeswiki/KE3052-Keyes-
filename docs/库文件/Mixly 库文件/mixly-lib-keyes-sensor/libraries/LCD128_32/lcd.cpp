@@ -350,3 +350,45 @@ void lcd::Display(char *str){
     }  
   }
 }
+
+//display number
+void lcd::DisplayNum(int num){
+	char str[18];
+	itoa(num, str, 10);
+	Display(str);
+}
+
+//display real-time numbers.
+void lcd::Display_Num(int num){
+  char str[18];
+  char x1, x2, y;
+
+  //Store cursor data.
+  y = cursor[0];
+  x1 = cursor[1];
+  x2 = x1;
+
+  //Clear the previously displayed data.
+  for(char i=numCursorPosition[cursor[1]][cursor[0]]; i>0; i--){
+    Cursor(y, x1);
+    Display(" ");
+    x1++;
+  }
+
+  //Reset the cursor position.
+  Cursor(y, x2);
+  itoa(num, str, 10);
+  //display data
+  Display(str);
+
+  //Store clear number of bits.
+  char Bit = 0; 
+  int divisor = 1;
+  for(char a = 0; a<5; a++){
+    if(num/divisor != 0)
+      Bit++;
+    divisor = divisor*10;
+  }
+  numCursorPosition[cursor[1]][cursor[0]] = Bit; 
+}
+
