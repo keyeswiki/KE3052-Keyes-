@@ -5,14 +5,9 @@
 
    README.md
    docs/产品介绍.md
-   docs/Arduino_C_教程/Arduino_C_教程.md
-   docs/KidsBlock_教程/KidsBlock_教程.md
-   docs/Mixly_教程/Mixly_教程.md
+   docs/Arduino/Arduino C教程.md
+   docs/scartch/scartch 教程.md
    docs/FAQ.md
-
-
-
-
 
 
 
