@@ -2,7 +2,7 @@
  * 名称   : PIR_Motion
  * 功能   : 读取人体红外传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 byte sensorPin = A0; //定义引脚A0
 void setup()

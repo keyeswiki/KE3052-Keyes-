@@ -2,7 +2,7 @@
  * 名称   : Buzzer
  * 功能   : 蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int buzzPin = A0; //定义引脚口A0  
 void setup(){

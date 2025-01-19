@@ -2,7 +2,7 @@
  * 名称   : XHT11
  * 功能   : 读取温湿度传感器的温度和湿度
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include <dht11.h>  //导入库文件
 dht11 DHT;

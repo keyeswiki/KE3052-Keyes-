@@ -2,7 +2,7 @@
  * 名称   : Photoresistor
  * 功能   : 读取光敏传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int sensorPin =A0 ;  //定义引脚A0
 int value = 0;    //设置value为0

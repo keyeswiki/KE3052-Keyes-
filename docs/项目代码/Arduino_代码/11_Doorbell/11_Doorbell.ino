@@ -2,7 +2,7 @@
  * 名称   : Doorbell
  * 功能   : 按键控制蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int button = A0;  //定义引脚A0接按键
 int buzz = A1;    //定义引脚A1接蜂鸣器

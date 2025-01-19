@@ -2,7 +2,7 @@
  * 名称   : Pressure_Alarm
  * 功能   : 压力传感器控制蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int pressure = A0; 
 int buzzer = A1;

@@ -2,7 +2,7 @@
  * 名称   : 128x32_LCD
  * 功能   : 128x32 LCD显示
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include "lcd128_32_io.h"  //添加lcd128_32_io库文件
 lcd lcd(A4, A5); //定义Lcd类实例和引脚

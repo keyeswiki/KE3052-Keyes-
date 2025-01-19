@@ -2,7 +2,7 @@
  * 名称   : LCD_Dashboard
  * 功能   : LCD显示温湿度值, 光照强度值和电位器值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include "lcd128_32_io.h" //导入lcd128_32_io库文件
 lcd Lcd(A4,A5);

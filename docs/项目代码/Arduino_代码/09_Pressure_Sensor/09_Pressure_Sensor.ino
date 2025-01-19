@@ -2,7 +2,7 @@
  * 名称   : Pressure_Sensor
  * 功能   : 读取压力传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int pin = A0;
 

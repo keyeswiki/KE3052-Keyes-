@@ -57,7 +57,7 @@ Arduino IDE下载、驱动安装及安装库文件的相关链接：[https://www
  * 名称   : Buzzer
  * 功能   : 蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int buzzPin = A0; //定义引脚口A0  
 void setup(){
@@ -117,7 +117,7 @@ void loop()
  * 名称   : Button
  * 功能   : 读取按键值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int button = A0;  //定义引脚A0
 void setup() {
@@ -196,7 +196,7 @@ Keyes 人体红外热释传感器，它主要由一个RE200B-P传感器元件组
  * 名称   : PIR_Motion
  * 功能   : 读取人体红外传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 byte sensorPin = A0; //定义引脚A0
 void setup()
@@ -262,7 +262,7 @@ Keyes 倾斜开关模块的原理非常简单，主要是利用滚珠在开关�
  * 名称   : Tilt Switch
  * 功能   : 读取倾斜开关模块的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int inputPin = A0; //定义引脚A0
 void setup() 
@@ -331,7 +331,7 @@ Keyes 光敏电阻传感器，这是一个常用的光敏电阻传感器，它�
  * 名称   : Photoresistor
  * 功能   : 读取光敏传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int sensorPin =A0 ;  //定义引脚A0
 int value = 0;    //设置value为0
@@ -393,7 +393,7 @@ Keyes 声音传感器主要由一个高感度麦克风元件和LM386音频功率
  * 名称   : Sound sensor
  * 功能   : 读取声音传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int sensorPin = A0 ;  //定义模拟口A0
 int value = 0;    //设置value为0
@@ -458,7 +458,7 @@ Keyes 旋转电位器，它一个模拟传感器。模块上电后，我们只�
  * 名称   : Potentiometer
  * 功能   : 读取旋转电位器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int sensorPin = A0 ;  //定义引脚A0
 int value = 0;      //设置value为0
@@ -543,7 +543,7 @@ XHT11是一款含有已校准数字信号输出的温湿度复合传感器，其
  * 名称   : XHT11
  * 功能   : 读取温湿度传感器的温度和湿度
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include <dht11.h>  //导入库文件
 dht11 DHT;
@@ -640,7 +640,7 @@ Keyes 薄膜压力传感器是基于新型纳米压敏材料辅以舒适杨式�
  * 名称   : Pressure_Sensor
  * 功能   : 读取压力传感器的值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int pin = A0;
 
@@ -730,7 +730,7 @@ void loop() {
  * 名称   : 128x32_LCD
  * 功能   : 128x32 LCD显示
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include "lcd128_32_io.h"  //添加lcd128_32_io库文件
 lcd lcd(A4, A5); //定义Lcd类实例和引脚
@@ -775,7 +775,7 @@ void loop() {
  * 名称   : Doorbell
  * 功能   : 按键控制蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int button = A0;  //定义引脚A0接按键
 int buzz = A1;    //定义引脚A1接蜂鸣器
@@ -821,7 +821,7 @@ void loop() {
  * 名称   : Burglar_Alarm
  * 功能   : 人体红外传感器控制蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int pir = A0;     
 int buzzer = A1;
@@ -863,7 +863,7 @@ void loop() {
  * 名称   : Pressure_Alarm
  * 功能   : 压力传感器控制蜂鸣器鸣叫
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 int pressure = A0; 
 int buzzer = A1;
@@ -908,7 +908,7 @@ void loop() {
  * 名称   : LCD_Dashboard
  * 功能   : LCD显示温湿度值, 光照强度值和电位器值
  * 编译IDE：ARDUINO 2.3.2
- * 作者   : https://www.keyestudio.com/
+ * 作者   : http://www.keyes-robot.com/
 */
 #include "lcd128_32_io.h" //导入lcd128_32_io库文件
 lcd Lcd(A4,A5);
