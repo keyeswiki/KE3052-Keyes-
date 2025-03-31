@@ -642,16 +642,18 @@ Keyes 薄膜压力传感器是基于新型纳米压敏材料辅以舒适杨式�
  * 编译IDE：ARDUINO 2.3.2
  * 作者   : http://www.keyes-robot.com/
 */
-int pin = A0;
+int pin = A0;  // 定义模拟输入引脚A0
 
-void setup(){
-  Serial.begin(9600);
-  pinMode(pin,INPUT);
+void setup()
+{  // 初始化设置
+  Serial.begin(9600);  // 初始化串口通信，波特率9600
+  pinMode(pin,INPUT);  // 设置引脚为输入模式
 }
 
-void loop() {
-  Serial.println(analogRead(pin));
-  delay(100);
+void loop() 
+{  // 主循环
+  Serial.println(analogRead(pin));  // 读取模拟引脚值并通过串口打印
+  delay(100);  // 延迟100毫秒
 }
 ```
 
@@ -823,21 +825,25 @@ void loop() {
  * 编译IDE：ARDUINO 2.3.2
  * 作者   : http://www.keyes-robot.com/
 */
-int pir = A0;     
-int buzzer = A1;
+int pir = A0;      // 定义PIR（人体红外传感器）输入引脚为A0
+int buzzer = A1;   // 定义蜂鸣器输出引脚为A1
 
-void setup() {
-  pinMode(pir,INPUT);
-  pinMode(buzzer,OUTPUT);
+void setup() 
+{  // 初始化设置
+  pinMode(pir, INPUT);     // 设置PIR引脚为输入模式
+  pinMode(buzzer, OUTPUT); // 设置蜂鸣器引脚为输出模式
 }
 
-void loop() { 
-  int value = digitalRead(pir);
-  if(value == 1){
-    digitalWrite(buzzer,HIGH);
+void loop() 
+{  // 主循环
+  int value = digitalRead(pir);  // 读取PIR传感器的数字信号（0或1）
+  if (value == 1) 
+  {  // 如果检测到人体（PIR输出高电平）
+    digitalWrite(buzzer, HIGH);  // 蜂鸣器鸣响
   }
-  else{
-    digitalWrite(buzzer,LOW);
+  else 
+  {  // 如果未检测到人体（PIR输出低电平）
+    digitalWrite(buzzer, LOW);   // 蜂鸣器关闭
   }
 }
 ```
